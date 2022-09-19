@@ -146,7 +146,7 @@ namespace ConsoleApp3
         {
             Random rand = new Random(); // générateur aléatoire
             int val = rand.Next(y, k); // génère une valeur entre 0 et 40 
-            int[] tab = new int[val];
+            int[] tab = new int[x];
 
             for(int i = 0; i < x; i++)
             {
