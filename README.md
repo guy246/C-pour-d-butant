@@ -123,6 +123,47 @@ namespace ConsoleApp3
             }
             Console.WriteLine("]");
         }
+        
+        //Exercice 10
+        static int[] GenererTableauAleatoire(int x,int y, int k)
+        {
+            Random rand = new Random(); // générateur aléatoire
+            int val = rand.Next(y, k); // génère une valeur entre 0 et 40 
+            int[] tab = new int[val];
+
+            for(int i = 0; i < x; i++)
+            {
+                val = rand.Next(y, k);
+                tab[i] = val;
+                
+            }
+            return tab;
+        }
+
+        static int Moyenne(int []tab)
+        {
+            
+            int somme = 0;
+            for(int i=0; i<tab.Length; i++)
+            {
+                somme += i;
+            }
+            somme=somme/ tab.Length;
+            return somme;
+        }
+
+        static void Affichertab()
+        {
+            int[] tableau = GenererTableauAleatoire(10, 0, 40);
+
+            for(int i=0; i<10; i++)
+            {
+                Console.WriteLine(tableau[i]);
+            }
+
+            double moyenneTab = Moyenne(tableau);
+            Console.WriteLine("Moyenne ="+moyenneTab);
+        }
         static void Main(string[] args)
         {
             //Exercice1();
