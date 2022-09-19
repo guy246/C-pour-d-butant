@@ -274,6 +274,50 @@ namespace ConsoleApp3
                 TriBulles(tab);
                 AfficherTableau(tab);
             }
+            
+         static int[] TriBulles(int[] Array)//Exercice15
+        {
+            
+            int MaxArray = Array.Length;
+            int a, /*b,*/ c, d;
+            
+            
+
+            for (a = 0; a < MaxArray; a++)
+            {
+                Console.Write(Array[a] + ", ");
+            }
+            for (c = MaxArray - 2; c >= 0; c--)
+            {
+                for (d = 0; d <= c; d++)
+                {
+                    if (Array[d + 1] < Array[d])
+                    {
+                        int ar = Array[d + 1];
+                        Array[d + 1] = Array[d];
+                        Array[d] = ar;
+                    }
+                }
+            }
+            return Array;
+
+
+            ///for (b = 0; b < MaxArray; b++)
+            {
+                /// Console.Write(", " + Array[b]);
+            }
+                       
+            
+        }
+        static void Exercice16()
+
+        {
+            int[] tab = GenererTableauAleatoire(10, 1, 20);
+            AfficherTableau(tab);
+            TriBulles(tab);
+            AfficherTableau(tab);
+            //on génère un tableau aléatoirement , on l'affiche on le tri et on l'affiche encore
+        }   
         static void Main(string[] args)
         {
             //Exercice1();
