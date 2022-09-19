@@ -124,6 +124,23 @@ namespace ConsoleApp3
             Console.WriteLine("]");
         }
         
+        static void Exercice9()
+        {
+            int[] tab = {1,4,8,5,3,15,2,35,24,6};
+            int[] tabInverse = new int[tab.Length];
+            for (int i =0; i < tab.Length; i++)
+            {
+                tabInverse[i] = tab[tab.Length -i-1];
+            }
+            Console.WriteLine("[");
+            foreach (int argument in tabInverse)
+            {
+                Console.Write("[{0}]", argument);
+            }
+            Console.WriteLine("]");
+        }
+        
+        
         //Exercice 10
         static int[] GenererTableauAleatoire(int x,int y, int k)
         {
@@ -163,21 +180,6 @@ namespace ConsoleApp3
 
             double moyenneTab = Moyenne(tableau);
             Console.WriteLine("Moyenne ="+moyenneTab);
-        }
-        static void Exercice9()
-        {
-            int[] tab = {1,4,8,5,3,15,2,35,24,6};
-            int[] tabInverse = new int[tab.Length];
-            for (int i =0; i < tab.Length; i++)
-            {
-                tabInverse[i] = tab[tab.Length -i-1];
-            }
-            Console.WriteLine("[");
-            foreach (int argument in tabInverse)
-            {
-                Console.Write("[{0}]", argument);
-            }
-            Console.WriteLine("]");
         }
         
          static void Exercice11()
