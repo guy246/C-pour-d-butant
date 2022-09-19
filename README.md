@@ -283,32 +283,49 @@ namespace ConsoleApp3
             AfficherTableau(tab);
             //on génère un tableau aléatoirement , on l'affiche on le tri et on l'affiche encore
         
-        }   
-        static int[,] ProduitMatriciel(int[,]mat1, int[,]mat2) // Exercice 14
+        }
+        
+        
+        
+        
+        
+        
+        static int[,] SommeMatriciel(int[,] mat1, int[,] mat2)
         {
-            int[,] nul = {};
-            int[,] mat3 = new int[mat1.GetLength(0), mat2.GetLength(1)];
-            int aux = 0;
-            if (mat1.GetLength(1) != mat2.GetLength(0))
+            int[,] mat = new int[mat1.GetLength(0), mat1.GetLength(1)];
+            int[,] nul = { };
+
+            if ((mat1.GetLength(0) != mat2.GetLength(0)) || (mat2.GetLength(1) != mat1.GetLength(1)))
             {
-                return nul ;
+                return nul;
             }
             else
             {
-                for (int i=0; i< mat1.GetLength(0);i++)
+                for (int i = 0; i < mat1.GetLength(0); i++)
                 {
-                    for (int j=0; j< mat2.GetLength(1);j++)
+                    for (int j = 0; j < mat1.GetLength(1); j++)
                     {
-                        aux = 0;
-                        for (int k = 0; k < mat1.GetLength(1); k++)
-                        {
-                            aux+= mat1[i,k] * mat2[k,j];
-                        }
-                        mat3[i, j] = aux;
+                        mat[i, j] = mat1[i, j] + mat2[i, j];
                     }
                 }
-                return mat3;
+                return mat;
             }
+
+        }
+            
+        static void AfficherSommeMatrice(int[,] mat1, int[,] mat2)
+        {
+            int[,] mat = SommeMatriciel(mat1, mat2);
+
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                for (int k = 0; k < mat.GetLength(1); k++)
+                {
+                    Console.Write(mat[i, k] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+        }
         static void Main(string[] args)
         {
             //Exercice1();
