@@ -237,7 +237,7 @@ namespace ConsoleApp3
             }
             
         }
-        static int[] TriBulles(int[] Array)
+        static int[] Exercice15(int[] Array)
         {
             const int MaxArray = Array.Length;
             int a, b, c, d;
