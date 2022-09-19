@@ -180,6 +180,36 @@ namespace ConsoleApp3
             Console.WriteLine("]");
         }
         
+         static void Exercice11()
+        {
+            int n1 = int.Parse(Console.ReadLine());
+            int n2 = int.Parse(Console.ReadLine());
+            bool res = true;
+
+            if (n1 != n2) { res = false; }
+
+            int[] tab1 = new int[n1];
+            for (int k =0; k< n1; k++) { tab1[k] = int.Parse(Console.ReadLine()); }
+
+            int[] tab2 = new int[n2];
+            for (int k = 0; k < n2; k++) { tab2[k] = int.Parse(Console.ReadLine()); }
+
+
+                for (int i = 0; i < tab1.Length; i++)
+                {
+                    for (int j = 0; j < tab2.Length; j++)
+                    {
+                        if (tab1[i] != tab2[j]) { res = false; }
+                        else { res = true; }
+                    }
+                }
+
+            if (res==true) { Console.WriteLine("tableaux égaux"); }
+            else { Console.WriteLine("tableaux différents"); }
+        }
+        
+        
+        
         static void Exercice12()
         {
             int compteur = 1;
