@@ -238,18 +238,19 @@ namespace ConsoleApp3
             
         }
                   
-         static int[] TriBulles(int[] Array)//Exercice15
+        static int[] TriBulles(int[] Array)
         {
             
             int MaxArray = Array.Length;
-            int a, /*b,*/ c, d;
+            int /*a,*/ /*b,*/ c, d;
             
             
-
+            /*
             for (a = 0; a < MaxArray; a++)
             {
                 Console.Write(Array[a] + ", ");
             }
+            */
             for (c = MaxArray - 2; c >= 0; c--)
             {
                 for (d = 0; d <= c; d++)
@@ -277,9 +278,11 @@ namespace ConsoleApp3
         {
             int[] tab = GenererTableauAleatoire(10, 1, 20);
             AfficherTableau(tab);
+            Console.WriteLine(" ");
             TriBulles(tab);
             AfficherTableau(tab);
             //on génère un tableau aléatoirement , on l'affiche on le tri et on l'affiche encore
+        
         }   
         static int[,] ProduitMatriciel(int[,]mat1, int[,]mat2) // Exercice 14
         {
