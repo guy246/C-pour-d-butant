@@ -354,6 +354,46 @@ namespace ConsoleApp3
         }
         
        
+       
+       
+       
+       
+       
+       
+       static int[,] ProduitMatriciel(int[,]mat1, int[,]mat2) // Exercice 14
+        {
+            int[,] nul = {};
+            int[,] mat3 = new int[mat1.GetLength(0), mat2.GetLength(1)];
+            int aux = 0;
+            if (mat1.GetLength(1) != mat2.GetLength(0))
+            {
+                return nul ;
+            }
+            else
+            {
+                for (int i=0; i< mat1.GetLength(0);i++)
+                {
+                    for (int j=0; j< mat2.GetLength(1);j++)
+                    {
+                        aux = 0;
+                        for (int k = 0; k < mat1.GetLength(1); k++)
+                        {
+                            aux+= mat1[i,k] * mat2[k,j];
+                        }
+                        mat3[i, j] = aux;
+                    }
+                }
+                return mat3;
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         static void Main(string[] args)
         {
             //Exercice1();
