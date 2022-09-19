@@ -164,6 +164,31 @@ namespace ConsoleApp3
             double moyenneTab = Moyenne(tableau);
             Console.WriteLine("Moyenne ="+moyenneTab);
         }
+        static void Exercice12()
+        {
+            int compteur = 1;
+            Console.WriteLine("Saisir les dimensions de la matrice");
+            int N = int.Parse(Console.ReadLine());
+            int M = int.Parse(Console.ReadLine());
+            int[,] array = new int[N, M];
+            for (int i = 0; i < N; i++)
+            {
+                for(int j = 0; j<M; j++)
+                {
+                    array[i,j] = compteur;
+                    compteur += 1;
+                }
+            }
+            for (int i = 0; i < N; i++)
+            {
+                   for (int j =0; j<M ; j++)
+                        {
+                            Console.Write(array[i,j]);
+                        }
+                Console.WriteLine("");
+            }
+            
+        }
         static void Main(string[] args)
         {
             //Exercice1();
