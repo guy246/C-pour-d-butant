@@ -105,7 +105,23 @@ namespace ConsoleApp3
         }
         static void Exercice8()
         {
-
+            int[] tableau1 = { 15, 19, 8, 5, 17, 10 };
+            int[] tableau2 = { 2, 25, 11, 6 };
+            int[] tableau3 = new int[tableau1.Length + tableau2.Length];
+            for (int i = 0; i < tableau1.Length; i++)
+            {
+                tableau3[i] = tableau1[i];
+                }
+            for (int j = 0; j< tableau2.Length;j++)
+            {
+                tableau3[j+tableau1.Length] = tableau2[j];
+            }
+            Console.WriteLine("[");
+            foreach (int argument in tableau3)
+            {
+                Console.Write("[{0}]", argument);
+            }
+            Console.WriteLine("]");
         }
         static void Main(string[] args)
         {
@@ -116,6 +132,7 @@ namespace ConsoleApp3
             //Exercice5();
             //Exercice6();
             //Exercice7();
+            //Exercice8();
             Console.ReadKey();
         }
     }
